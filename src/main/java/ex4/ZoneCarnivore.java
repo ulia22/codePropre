@@ -1,26 +1,15 @@
 package ex4;
 
-import java.util.List;
+/**
+ * @author ETY9
+ *
+ */
+public class ZoneCarnivore extends ZoneAnimale {
 
-public class ZoneCarnivore {
-
-	private List<String> types;
-	private List<String> noms;
-	private List<String> comportements;
-	
-	public void addAnimal(String typeAnimal, String nomAnimal, String comportement) {
-		types.add(typeAnimal);
-		noms.add(nomAnimal);
-		comportements.add(comportement);
-	}
-	
-	public void afficherListeAnimaux(){
-		for (String nom: noms){
-			System.out.println(nom);
-		}
-	}
-	
+	/* (non-Javadoc)
+	 * @see ex4.ZoneAnimale#calculerKgsNourritureParJour()
+	 */
 	public double calculerKgsNourritureParJour(){
-		return noms.size() * 10;
+		return animaux.size() * 10.0;
 	}
 }

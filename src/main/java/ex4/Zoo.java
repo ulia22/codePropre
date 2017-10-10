@@ -3,26 +3,31 @@ package ex4;
 public class Zoo {
 
 	private String nom;
-	private SavaneAfricaine savaneAfricaine;
-	private ZoneCarnivore zoneCarnivore;
-	private FermeReptile fermeReptile;
-	private Aquarium aquarium;
+	private ZoneAnimale savaneAfricaine;
+	private ZoneAnimale zoneCarnivore;
+	private ZoneAnimale fermeReptile;
+	private ZoneAnimale aquarium;
 	
 	public Zoo(String nom){
 		this.nom = nom;
+		this.savaneAfricaine = new SavaneAfricaine();
+		this.zoneCarnivore = new ZoneCarnivore();
+		this.fermeReptile = new FermeReptile();
+		this.aquarium = new Aquarium();
+		
 	}
 	
-	public void addAnimal(String nomAnimal, String typeAnimal, String comportement){
-		if (typeAnimal.equals("MAMMIFERE") && comportement.equals("CARNIVORE")){
+	public void addAnimal(String nomAnimal, TypeAnimal typeAnimal, ComportementAnimal comportement){
+		if (typeAnimal.equals(TypeAnimal.MAMMIFERE) && comportement.equals(ComportementAnimal.CARNIVORE)){
 			zoneCarnivore.addAnimal(typeAnimal, nomAnimal, comportement);
 		}
-		else if (typeAnimal.equals("MAMMIFERE") && comportement.equals("HERBIVORE")){
+		else if (typeAnimal.equals(TypeAnimal.MAMMIFERE) && comportement.equals(ComportementAnimal.HERBIVORE)){
 			savaneAfricaine.addAnimal(typeAnimal, nomAnimal, comportement);
 		}
-		else if (typeAnimal.equals("REPTILE")){
+		else if (typeAnimal.equals(TypeAnimal.REPTILE)){
 			fermeReptile.addAnimal(typeAnimal, nomAnimal, comportement);
 		}
-		else if (typeAnimal.equals("POISSON")){
+		else if (typeAnimal.equals(TypeAnimal.POISSON)){
 			aquarium.addAnimal(typeAnimal, nomAnimal, comportement);
 		}
 	}

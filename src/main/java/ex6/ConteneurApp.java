@@ -9,7 +9,13 @@ public class ConteneurApp {
 		conteneur.add("trois");
 		conteneur.add("quatre");
 		conteneur.add("cinq");
+		conteneur.add("six");
 		
+		for (int i=0; i<conteneur.getSize(); i++){
+			System.out.println(conteneur.getContent(i));
+		}
+		
+		conteneur.remove(3);
 		for (int i=0; i<conteneur.getSize(); i++){
 			System.out.println(conteneur.getContent(i));
 		}

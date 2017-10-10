@@ -1,30 +1,19 @@
 package ex4;
 
-import java.util.List;
-
-public class FermeReptile {
-
-	private List<String> types;
-	private List<String> noms;
-	private List<String> comportements;
+/**
+ * @author ETY9
+ *
+ */
+public class FermeReptile extends ZoneAnimale{
 	
-	public void addAnimal(String typeAnimal, String nomAnimal, String comportement) {
-		types.add(typeAnimal);
-		noms.add(nomAnimal);
-		comportements.add(comportement);
-	}
-	
-	public void afficherListeAnimaux(){
-		for (String nom: noms){
-			System.out.println(nom);
-		}
-	}
-	
+	/**
+	 * @return nb d'animaux dans la ferme à reptiles
+	 */
 	public int compterAnimaux(){
-		return noms.size();
+		return animaux.size();
 	}
 	
 	public double calculerKgsNourritureParJour(){
-		return noms.size() * 0.1;
+		return animaux.size() * 0.1;
 	}
 }
